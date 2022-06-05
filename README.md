@@ -5,3 +5,4 @@
 - Router
 - Axios
 - Store
+![ex_screenshot](./vue-news/src/assets/map.png)
