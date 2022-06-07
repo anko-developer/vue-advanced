@@ -21,7 +21,20 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  
+}
+
+a {
+  text-decoration: none;
+  color: #35495e;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #42b883;
+}
+
+.router-link-exact-active {
+  text-decoration: underline;
 }
 
 .page-enter-active,
