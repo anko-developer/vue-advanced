@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <!-- 사용자 정보 -->
+      <!-- 사용자 정보. -->
       <UserProfile :info="fetchedItem">
         <router-link slot="username" :to="`/user/${fetchedItem.user}`">
           {{ fetchedItem.user }}
