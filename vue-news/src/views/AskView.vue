@@ -6,13 +6,15 @@
 
 <script>
 import ListItem from '../components/ListItem';
+import ListMixin from '../mixins/ListMixin';
 
 // import { mapGetters } from 'vuex';
 
 export default {
   components: {
     ListItem,
-  }
+  },
+  mixins: [ListMixin],
 };
 </script>
 
