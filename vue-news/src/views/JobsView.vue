@@ -5,7 +5,7 @@
 </template>
 
 <script>
-라import ListItem from '../components/ListItem';
+import ListItem from '../components/ListItem';
 import ListMixin from '../components/ListItem';
 // import bus from '../utils/bus';
 
