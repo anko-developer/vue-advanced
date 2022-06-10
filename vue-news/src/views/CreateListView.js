@@ -9,8 +9,8 @@ export default function createListView(name) {
       bus.$emit('start:spinner');
       this.$store.dispatch('FETCH_LIST', this.$route.name)
         .then(() => {
-          console.log('fatched');
           bus.$emit('end:spinner');
+          console.log('5');
         })
         .catch((error) => {
           console.log(error);
