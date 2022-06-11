@@ -13,9 +13,6 @@ export default {
   components: {
     ListItem
   },
-  // mounted() {
-  //   bus.$emit('end:spinner');
-  // }
   mixins: [ListMixin]
 };
 </script>
