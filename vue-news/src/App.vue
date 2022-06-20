@@ -34,6 +34,8 @@ export default {
   created() {
     bus.$on('start:spinner', this.statartSpinner);
     bus.$on('end:spinner', this.endSpinner);
+
+    console.log(process.env.VUE_APP_TITLE);
   },
   beforeDestory() {
     bus.$off('start:spinner', this.startSpinner);
