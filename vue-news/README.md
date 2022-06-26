@@ -1,4 +1,4 @@
-# vue-news..
+# vue-news
 
 ## Project setup
 ```
