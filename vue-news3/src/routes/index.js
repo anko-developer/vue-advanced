@@ -28,11 +28,11 @@ export const router = new VueRouter({
       component: JobsView,
     },
     {
-      path: '/itemview',
+      path: '/item/:id',
       component: ItemView,
     },
     {
-      path: '/userview',
+      path: '/user/:id',
       component: UserView,
     }
   ]

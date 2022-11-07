@@ -1,18 +1,28 @@
 <template>
   <div>
-    <div v-for="user in this.$store.state.news" v-bind:key="user.id">{{ user.title }}</div>
+    <p v-for="item in fetchedNews" v-bind:key="item.id">
+      <a :href="item.url">
+        {{ item.title }}
+      </a>
+      <span>
+        {{ item.time_ago }} by 
+        <router-link v-bind:to="`/user/${item.user}`">{{ item.user }}</router-link>
+      </span>
+    </p>
   </div>
 </template>
 
 <script>
-// import { fetchNewsList } from '../api/index.js';
+import { mapGetters } from 'vuex';
 
 export default {
+  computed: {
+    ...mapGetters([
+      'fetchedNews'
+    ])
+  },
   created() {
     this.$store.dispatch('FETCH_NEWS');
-    // fetchNewsList()
-    //   .then(response => this.users = response.data)
-    //   .catch(error => console.log(error))
   }
 }
 </script>

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { fetchNewsList, fetchJobsList, fetchAskList } from '../api/index.js';
+import mutations from './mutations';
+import actions from './actions';
 
 Vue.use(Vuex);
 
@@ -9,34 +10,23 @@ export const store = new Vuex.Store({
     news: [],
     ask: [],
     jobs: [],
+    user: {},
+    item: [],
   },
-  mutations: {
-    SET_NEWS(state, news) {
-      state.news = news;
+  getters: {
+    fetchedNews(state) {
+      return state.news;
     },
-    SET_ASK(state, ask) {
-      state.ask = ask;
+    fetchedJobs(state) {
+      return state.jobs;
     },
-    SET_JOBS(state, jobs) {
-      state.jobs = jobs;
+    fetchedAsk(state) {
+      return state.ask;
     },
+    fetchedItem(state) {
+      return state.item;
+    }
   },
-  actions: {
-    FETCH_NEWS(context) {
-      fetchNewsList()
-        .then(({ data }) => context.commit('SET_NEWS', data) )
-        .catch(error => console.log(error))
-    },
-    FETCH_ASK(context) {
-      fetchAskList()
-        .then(({ data }) => context.commit('SET_ASK', data))
-        .catch(error => console.log(error))
-    },
-    FETCH_JOBS(context) {
-      fetchJobsList()
-        .then(({ data }) => context.commit('SET_JOBS', data))
-        .catch(error => console.log(error))
-    },
-
-  }
+  mutations,
+  actions,
 });

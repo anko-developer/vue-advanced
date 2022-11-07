@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// Response 관련된 기본 설정
 const config = {
   baseUrl: 'https://api.hnpwa.com/v0/'
 };
@@ -17,8 +18,18 @@ function fetchJobsList() {
   return axios.get(`${config.baseUrl}jobs/1.json`);
 }
 
+function fetchUserInfo(namename) {
+  return axios.get(`${config.baseUrl}user/${namename}.json`);
+}
+
+function fetchCommentItem(id) {
+  return axios.get(`${config.baseUrl}item/${id}.json`);
+}
+
 export {
   fetchNewsList,
   fetchAskList,
   fetchJobsList,
+  fetchUserInfo,
+  fetchCommentItem,
 }
