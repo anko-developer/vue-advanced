@@ -60,18 +60,18 @@ export default {
     const name = this.$route.name;
     let actionName = '';
 
-    if (name === 'news') {
-      // this.$store.dispatch('FETCH_NEWS');
-      actionName = 'FETCH_NEWS';
-    } else if (name === 'jobs') {
-      // this.$store.dispatch('FETCH_JOBS');
-      actionName = 'FETCH_JOBS';
-    } else if (name === 'ask') {
-      // this.$store.dispatch('FETCH_ASK');
-      actionName = 'FETCH_ASK';
-    }
+    // if (name === 'news') {
+    //   // this.$store.dispatch('FETCH_NEWS');
+    //   actionName = 'FETCH_NEWS';
+    // } else if (name === 'jobs') {
+    //   // this.$store.dispatch('FETCH_JOBS');
+    //   actionName = 'FETCH_JOBS';
+    // } else if (name === 'ask') {
+    //   // this.$store.dispatch('FETCH_ASK');
+    //   actionName = 'FETCH_ASK';
+    // }
 
-    this.$store.dispatch(actionName);
+    // this.$store.dispatch(actionName);
   }
 }
 </script>
