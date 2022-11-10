@@ -6,7 +6,7 @@
 
 <script>
 import ListItem from '../components/ListItem';
-import bus from '../utils/bus.js';
+// import bus from '../utils/bus.js';
 import ListMixin from '@/mixins/ListMixin.js';
 
 export default {
@@ -24,6 +24,6 @@ export default {
   //     })
   //     .catch((error) => console.log(error));
   //   }, 3000);
-  }
+  // }
 }
 </script>
