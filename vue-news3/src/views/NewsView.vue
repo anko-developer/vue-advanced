@@ -14,6 +14,9 @@ export default {
     ListItem,
   },
   mixins: [ListMixin],
+  // mounted() {
+  //   bus.$emit('end:spinner');
+  // }
   // created() {
   //   bus.$emit('start:spinner');
   //   setTimeout(() => {
