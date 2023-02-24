@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <!-- Font Test -->
+    <p style="font-size:9px">폰트 9px</p>
+    <p style="font-size:10px">폰트 10px</p>
+    <p style="font-size:9pt">폰트 9pt</p>
+    <p style="font-size:10pt">폰트 10pt</p>
     <ToolBar></ToolBar>
     <transition name="page">
       <router-view></router-view>
